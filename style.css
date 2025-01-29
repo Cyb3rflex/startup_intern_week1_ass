@@ -1,0 +1,277 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1e90ff, #87ceeb);
+  color: white;
+  padding: 20px;
+}
+
+/* Wrapper */
+.both {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Enables responsiveness */
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Left Section */
+.container {
+  text-align: center;
+  border: 1px solid #ddd;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 20px;
+  background: #1e90ff;
+  flex: 1;
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+.phone-container {
+  position: relative;
+  width: 250px;
+  height: 450px;
+  margin: 0 auto;
+}
+
+.phone {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.phone-front {
+  z-index: 3;
+  transform: translateY(0);
+}
+
+.phone-middle {
+  z-index: 2;
+  transform: translateY(20px) scale(0.95);
+  opacity: 0.9;
+}
+
+.phone-back {
+  z-index: 1;
+  transform: translateY(40px) scale(0.9);
+  opacity: 0.8;
+}
+
+/* Right Section */
+.right_image_container {
+  background: white;
+  border: 1px solid #ddd;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 40px;
+  flex: 1;
+  min-width: 350px;
+  max-width: 500px;
+  text-align: center;
+  color: black;
+}
+
+.logo img {
+  max-width: 50px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+span {
+  font-size: 14px;
+  color: #777;
+}
+
+p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Form */
+form {
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  min-width: 150px;
+}
+
+/* Aligns checkbox and text side by side */
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Remember Me + Forgot Password */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.form-options a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+}
+
+.form-options a:hover {
+  text-decoration: underline;
+}
+
+/* Terms and Conditions */
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.terms a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 14px;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  width: 80%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.create-btn {
+  background: #007bff;
+  color: white;
+}
+
+.google-btn {
+  background: #555;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.google-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+/* Login option */
+.login-option {
+  font-size: 0.9rem;
+}
+
+.login-option a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Store Links */
+.store-links {
+  margin-top: 15px;
+}
+
+.store-links img {
+  width: 150px;
+  height: auto;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .both {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .right_image_container {
+    border-radius: 5px;
+    padding: 30px;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .phone-container {
+    width: 200px;
+    height: 350px;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+
+  .store-links img {
+    width: 120px;
+  }
+}
